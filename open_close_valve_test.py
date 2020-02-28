@@ -20,7 +20,7 @@ class bcolors:
     UNDERLINE = '\033[4m'
 
 gurl = 'http://'+sys.argv[2]+'/'
-gcntr = int(sys.argv[1])+1		# global counter of tests
+gcntr = int(sys.argv[1])		# global counter of tests
 
 # gurl = 'http://192.168.0.1/'
 browser = webdriver.Firefox()
