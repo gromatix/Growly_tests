@@ -6,6 +6,7 @@
 import time
 import datetime
 import sys
+import collections
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
@@ -81,10 +82,13 @@ while (gcntr>0):
 	gcntr-=1
 
 print("Test execution time statistics (seconds : times)")
-for key in diffs:
+
+odiffs = collections.OrderedDict(sorted(diffs.items()))
+
+for key in odiffs:
 	print(key),
 	print(" : "),
-	print(diffs[key])
+	print(odiffs[key])
 
 print("Total: "),
 print(sys.argv[1])
